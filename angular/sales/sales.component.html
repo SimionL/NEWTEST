@@ -1,0 +1,33 @@
+<br/>
+<br/>
+
+<div style="text-align: center;">
+  <span style="cursor:pointer; background-color:red; border-radius: 25px;" (click)="goToProduct()">&nbsp;&nbsp;New Product&nbsp;&nbsp;</span>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style="cursor:pointer ; background-color:green; border-radius: 25px;">&nbsp;&nbsp;Products list&nbsp;&nbsp;</span>
+</div>
+
+<div *ngFor="let ac of accounts">
+  
+  {{ac.name}}
+  <br/>
+  {{ac.surname}}
+  <br/>
+  {{ac.balance}}
+  <br/>
+  {{ac.customerID}}
+  <br/>
+  {{ac.initialCredit}}
+  <br/>
+  {{ac.isCurrentAccount}}
+
+  <div *ngFor="let tr of ac.transactions">
+    {{tr}}
+    &nbsp;&nbsp;
+  </div>
+
+<br/>
+<br/>
+<br/>
+
+</div>

@@ -1,0 +1,44 @@
+<br/>
+<br/>
+
+<div style="text-align: center;">
+        <span style="cursor:pointer; background-color:green; border-radius: 25px;">&nbsp;&nbsp;New Product&nbsp;&nbsp;</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="cursor:pointer ; background-color:red; border-radius: 25px;" (click)="goToSales()">&nbsp;&nbsp;Products list&nbsp;&nbsp;</span>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<form [formGroup]="form">
+
+    <table>
+        <tr>
+            <td>
+                <label>Customer ID</label>
+            </td>
+
+            <td>
+                <input formControlName="customerID">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Initial credit</label>   
+            </td>
+
+            <td>
+                <input type="number" formControlName="initialCredit" maxlength="2" size="1" max="2" pattern="[0-9]*">
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align:center">
+        <button style="cursor:pointer" (click)="save()">Save</button> &nbsp; &nbsp; &nbsp;
+        <button style="cursor:pointer" (click)="clearForm()">Clear</button>
+    </div>
+
+</form>
